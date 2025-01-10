@@ -1295,7 +1295,7 @@ function update_sys() {
     else
         echo "${R}[${C}-${R}]${G}${BOLD}Selecting best termux packages mirror please wait${W}"
         unlink "$PREFIX/etc/termux/chosen_mirrors" &>/dev/null
-        ln -s "$PREFIX/etc/termux/mirrors/all" "$PREFIX/etc/termux/chosen_mirrors" &>/dev/null
+        ln -s "$PREFIX/etc/termux/mirrors/north_america" "$PREFIX/etc/termux/chosen_mirrors" &>/dev/null
         pkg --check-mirror update
         pkg update -y -o Dpkg::Options::="--force-confnew"
         pkg upgrade -y -o Dpkg::Options::="--force-confnew"
